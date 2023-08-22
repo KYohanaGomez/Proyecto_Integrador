@@ -1,0 +1,12 @@
+
+.inputSearch{
+    border-radius: 5%;
+    font-style: italic;
+    font-size: x-large;
+
+}
+
+.botonSearch{
+    font-size: x-large;
+    background-color: rgb(137, 15, 203);
+}

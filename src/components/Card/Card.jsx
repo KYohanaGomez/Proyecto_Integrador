@@ -1,9 +1,12 @@
-export default function Card({ id,name,status,gender,origin,
+import styles from'./Card.module.css';
+
+export default function Card({id,name,status,gender,origin,
    species,image,onClose}) {
 
+
    return (
-      <div>
-         <button onClick={onClose}>❌</button>
+      <div className={styles.card}>
+         <button onClick={()=>onClose(id)}>❌</button>
          <h2>{name}</h2>
          <h2>{status}</h2>
          <h2>{gender}</h2>
