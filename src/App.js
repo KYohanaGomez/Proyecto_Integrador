@@ -7,9 +7,11 @@ import { Routes, Route, useLocation, useNavigate} from 'react-router-dom';
 import Detail from './components/Detail/Detail'
 import About from './components/About/About.jsx';
 import Form from './components/Form/Form.jsx';
+import Favorites from './components/Favorites/Favorites';
 
 
-const email = 'kygg.16@hotmail.com';
+
+const email = 'johanagomez_94@hotmail.com';
 const password = '12345ky';
 
 function App() {
@@ -62,15 +64,16 @@ function App() {
          
       </div>
       <Routes> 
-          <Route path='/' element={<Form login={login}/>}/>
-         <Route
+          <Route 
+          path='/' element={<Form login={login}/>}/>
+          <Route
           path='/home' element={<Cards
           characters={characters}
           onClose={onClose} />}
           />
           <Route path='/about' element={<About/>}/>
-      
           <Route path='/detail/:id' element={<Detail characters={characters}/>}/>
+          <Route path='/favorites' element={<Favorites />}/>
       </Routes>
       </div> 
          

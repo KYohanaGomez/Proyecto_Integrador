@@ -1,0 +1,53 @@
+.email{
+   
+    font-size: x-large;
+    background-color: rgb(220, 128, 201);
+    position: relative ;
+    box-shadow: 0px 10px 30px rgb(255, 192, 234) ;
+    color: rgb(174, 84, 169);
+}
+
+.email:hover {
+    font-size: 250%;
+    background-color: rgb(141, 51, 190);
+    box-shadow: 0px 10px 30px pink ;
+    color: pink;
+}
+.labelemail{
+   
+    font-size: x-large;
+    position: relative ;
+    text-shadow: 0px 0px 20px rgb(255, 192, 234) ;
+    color: rgb(237, 187, 204);
+}
+.password {
+   
+    font-size: x-large;
+    background-color: rgb(248, 143, 227);
+    position: relative ;
+    box-shadow: 0px 10px 30px rgb(212, 88, 171) ;
+    color: rgb(232, 111, 154);
+}
+
+.password:hover {
+    font-size: 250%;
+    background-color: rgb(136, 23, 234);
+    box-shadow: 0px 10px 30px rgb(171, 149, 171) ;
+    color: rgb(217, 97, 205);
+}
+.labelpassword{
+   
+    font-size: x-large;
+    position: relative ;
+    text-shadow: 0px 0px 20px rgb(162, 144, 156) ;
+    color: rgb(165, 126, 139);
+}
+.submit{
+    font-size: x-large;
+    background-color: rgb(241, 129, 218);
+    position: relative ;
+    box-shadow: 0px 10px 30px rgb(239, 222, 233) ;
+    color: rgb(169, 104, 180);
+
+}
+
