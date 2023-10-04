@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom"
 import axios from "axios";
 import { useState, useEffect} from "react";
+import styles from './Detail.module.css';
+
 
 export default function Detail({characters}){
 
@@ -23,19 +25,21 @@ export default function Detail({characters}){
     //const chars = characters?.filter((char) => char.id === Number(id))[0];
     
 
-    return(
-        <div>
-           {character && (
-           <div>
-            <h2>{character.id}</h2>
-            <h2>{character.name}</h2>
-            <h2>{character.status}</h2>
-            <h2>{character.gender}</h2>
-            <h2>{character.origin?.name}</h2>      
-            <h2>{character.species}</h2>
-            <img src={character.image} alt=''/>
-           </div>
-           )}     
-        </div>
-    );
+   return (
+      <div className={styles.container}>
+         <img src={character.image} alt=''/>
+         <div className={styles.card}>
+            {character && (
+               <div>
+                  <h2>{character.id}</h2>
+                  <h2>{character.name}</h2>
+                  <h2>{character.status}</h2>
+                  <h2>{character.gender}</h2>
+                  <h2>{character.origin?.name}</h2>
+                  <h2>{character.species}</h2>
+               </div>
+            )}
+         </div>
+      </div>
+   );
 }
