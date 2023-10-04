@@ -5,46 +5,38 @@ const initialState = {
     myFavorites: [],
     allCharactersFav: []
 
-
 }
-
 const reducer = (state = initialState, { type, payload }) => {
     switch (type) {
         case ADD_FAV:
             return {
                 ...state,
-                myFavorites: [...state.allCharactersFav, payload],
-                allCharactersFav: [...state.allCharactersFav, payload]
-            }
+                myFavorites: payload, 
+                allCharactersFav: payload,
+
+                // ...state,
+                // myFavorites: [...state.allCharactersFav, payload],
+                // allCharactersFav: [...state.allCharactersFav, payload]
+            };
         case REMOVE_FAV:
             return {
                 ...state,   
-                myFavorites: state.myFavorites.filter(fav => fav.id !== payload)
-            }
+                myFavorites: payload,
+                allCharactersFav: payload,
+
+               // myFavorites: state.myFavorites.filter(fav => fav.id !== payload)
+            };
 
         case FILTER:
-            const allCharactersFiltered = state.allCharactersFav.filter(character => character.gender === payload)
-    
-            
+            let allCharactersFiltered = payload === 'Genders'? state.allCharactersFav :
+            state.allCharactersFav.filter(character =>character.gender === payload)
             return {
                 ...state,
                 myFavorites: allCharactersFiltered
-
-            }
-            // case ORDER:
-            // // eslint-disable-next-line no-case-declarations
-            // let copy4 = state.allCharactersFav.sort((a, b) => {
-            //     if(payload === 'A'){
-            //         return a.id - b.id
-            //     }else if (payload === 'D'){
-            //         return b.id - a.id
-            //     }else{
-            //         return 0;
-            //     }
-            // })
+            };
 
         case ORDER:
-            const allCharactersFavCopy = [...state.allCharactersFav]
+            let allCharactersFavCopy = [...state.allCharactersFav]
             return {
                 ...state,
                 myFavorites:

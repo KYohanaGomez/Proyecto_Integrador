@@ -6,23 +6,20 @@ import { useState } from "react";
 
 
 const Favorites = ()=> {
-
-    const dispatch = useDispatch();
+    const genders = ['Genders', 'Male', 'Female', 'Genderless', 'unknown'];
     const [aux, setAux] = useState(false);
-
-    const removeFavorite = (id) => {dispatch(removeFav(id))}
-
+    const dispatch = useDispatch();
     const myFavorites = useSelector((state) => state.myFavorites)
 
+    const removeFavorite = (id) => {
+        dispatch(removeFav(id))}
+
     const handleOrder = (event) => {
-     dispatch(orderCards(event.target.value));
-     setAux(true)
-
+        dispatch(orderCards(event.target.value));
+     setAux(!aux)
     }
-
     const handleFilter = (event) => {
         dispatch(filterCads(event.target.value))
-
     }
 
     return (
@@ -33,26 +30,31 @@ const Favorites = ()=> {
             </select>
 
             <select onChange={handleFilter}>   
-                <option value="Generos">Generos</option>
+
+            {genders?.map((option) => (
+                <option key = {option} value={option}>
+                    {option}
+                </option>
+            ))}
+                {/* <option value="Genders">Genders</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
                 <option value="Genderless">Genderless</option>
-                <option value="unknown">unknown</option>
+                <option value="unknown">unknown</option> */}
             </select>
         {
-
-
-
-            myFavorites?.map(fav =>{
+            myFavorites?.map(({id, name, species, gender, image, origin, status}) =>{
                 return(
                     <Card
-                    key ={fav.id}
-                    id={fav.id}
-                    name={fav.name}
-                    species={fav.species}
-                    gender={fav.gender}
-                    image={fav.image}
-                    onClose={()=>{removeFavorite(fav.id)}}
+                    key ={id}
+                    id={id}
+                    name={name}
+                    species={species}
+                    gender={gender}
+                    image={image}
+                    origin={origin}
+                    status={status}
+                    onClose={()=>{removeFavorite(id)}} 
                     />
                 )
             })
