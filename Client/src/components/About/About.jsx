@@ -15,7 +15,6 @@ export default function About () {
        de todo lo que he aprendido hasta ahora y espero seguir aprendiendo muchas cosas más,
        se que la programación es la puerta hacia un futuro prospero.</p>
     </div>
-
     )
 }
         

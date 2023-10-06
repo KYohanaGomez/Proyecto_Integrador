@@ -24,12 +24,9 @@ server.use((req, res, next) => {
 
  server.use('/rickandmorty', router);   
 
-
 server.listen(PORT,'localhost', () => {
     console.log(`Servidor corriendo en el puerto ${PORT}`);
 })
-
-
 
 
 

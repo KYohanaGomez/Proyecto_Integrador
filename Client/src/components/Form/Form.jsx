@@ -6,7 +6,7 @@ const Form = ({login}) => {
     const [errors, setErrors] = useState({});
     const [userData, setUserData] = useState({
         email: '',
-        password: ''
+        password: '',
     });
 
     const handleChange = (evento) => {
@@ -25,7 +25,6 @@ const Form = ({login}) => {
         login(userData);
 
     }
-
     return(
          
         <div>
@@ -34,14 +33,12 @@ const Form = ({login}) => {
                 <input className={style.email} type='Email...' name='email' value={userData.email}
                 onChange={handleChange}/>
                 {errors.email && <p >{errors.email}</p>}
-                <hr />
+                
                 <label className={style.labelpassword} htmlFor='password' >Password: </label>
                 <input className={style.password} type='Password...' name='password' value={userData.password}
                 onChange={handleChange}/>
                  {errors.password && <p>{errors.password}</p>}
-            
-                <hr />
-
+                
                 <button className={style.submit} >Submit</button>
             </form>
         </div>

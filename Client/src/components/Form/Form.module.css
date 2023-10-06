@@ -1,53 +1,85 @@
 .email{
-   
-    font-size: x-large;
-    background-color: rgb(220, 128, 201);
-    position: relative ;
-    box-shadow: 0px 10px 30px rgb(255, 192, 234) ;
-    color: rgb(174, 84, 169);
+    border-radius: 10mm;
+    border-color: rgb(247, 247, 247);
+    border-style: dashed;
+    padding: 10px;
+    width: 350px;
+    font-size: 20px;
+    background-color: rgba(244, 117, 218, 0.756);
+    position: absolute ;
+    left: 42%;
+    top: 20%;
+    box-shadow: 0px 10px 30px rgb(242, 108, 197) ;
+    color: rgb(0, 0, 0);
 }
 
 .email:hover {
-    font-size: 250%;
-    background-color: rgb(141, 51, 190);
-    box-shadow: 0px 10px 30px pink ;
-    color: pink;
+    padding: 20px 20px 20px 20px;
+    font-size: 30px;
+    transition: 1000ms;
+    background-color: rgb(254, 135, 254);
 }
 .labelemail{
-   
-    font-size: x-large;
-    position: relative ;
+    border-radius: 10mm;
+    padding: 0px 10px 5px 10px;
+   background-color: rgba(0, 0, 0, 0.557);
+    font-size: 250%;
+    left: 30%;
+    top: 18%;
+    position: absolute ;
     text-shadow: 0px 0px 20px rgb(255, 192, 234) ;
-    color: rgb(237, 187, 204);
+    color: rgb(246, 83, 216);
 }
 .password {
-   
-    font-size: x-large;
-    background-color: rgb(248, 143, 227);
-    position: relative ;
-    box-shadow: 0px 10px 30px rgb(212, 88, 171) ;
-    color: rgb(232, 111, 154);
+    border-color: rgb(247, 247, 247);
+    border-style: dashed;
+    border-radius: 10mm;
+    padding: 10px;
+    width: 350px;
+    font-size: 20px;
+    background-color: rgba(244, 117, 218, 0.756);
+    position: absolute ;
+    left: 42%;
+    top: 40%;
+    box-shadow: 0px 10px 30px rgb(242, 108, 197) ;
+    color: rgb(0, 0, 0);
 }
 
 .password:hover {
-    font-size: 250%;
-    background-color: rgb(136, 23, 234);
-    box-shadow: 0px 10px 30px rgb(171, 149, 171) ;
-    color: rgb(217, 97, 205);
+    padding: 20px 20px 20px 20px;
+    font-size: 30px;
+    transition: 1000ms;
+    background-color: rgb(254, 135, 254);
 }
 .labelpassword{
-   
-    font-size: x-large;
-    position: relative ;
-    text-shadow: 0px 0px 20px rgb(162, 144, 156) ;
-    color: rgb(165, 126, 139);
+    padding: 0px 10px 5px 10px;
+    border-radius: 10mm;
+    background-color: rgba(0, 0, 0, 0.557);
+    font-size: 250%;
+    position: absolute ;
+    left: 25%;
+    top: 39%;
+    text-shadow: 0px 0px 20px rgba(239, 111, 196, 0.659) ;
+    color: rgb(244, 102, 237);
+
 }
 .submit{
+    padding: 5px 15px 5px 15px;
+    border-radius: 10mm;
     font-size: x-large;
-    background-color: rgb(241, 129, 218);
-    position: relative ;
-    box-shadow: 0px 10px 30px rgb(239, 222, 233) ;
-    color: rgb(169, 104, 180);
+    background-color: rgb(209, 206, 206);
+    position: absolute ;
+    left: 530px;
+    top: 58%;
+    color: rgb(218, 62, 241);
+}
 
+.submit:hover{
+    box-shadow: 0px 0px 30px 40px rgb(222, 47, 161) ;
+    cursor: pointer;
+    transition: 500ms;
+    background-color: rgb(255, 255, 255);
+    font-size: 200%;
+    border-color: magenta;
 }
 

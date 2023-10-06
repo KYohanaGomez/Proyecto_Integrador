@@ -8,14 +8,13 @@ const login = (req, res) => {
     // }
     // res.status(403).json({access:false})
 
-    const userFound = users.filter((user) => user.email === email && 
+    const userFound = users.find((user) => user.email === email && 
     user.password === password)
 
     return userFound ? res.status(200).json({access: true}):
     res.status(404).json({access:false})
 
 }
-
 
 module.exports = login;
 
