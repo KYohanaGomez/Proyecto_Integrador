@@ -4,7 +4,8 @@ import { addFav, removeFav } from '../../Redux/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState, useEffect} from 'react';
 
- function Card({id, gender, name, image, species, origin, status, onClose}) {
+ function Card( {id, name, image, gender, status, species, origin, onClose}) {
+   console.log(id);
 
    const [isFav, setIsFav] = useState(false);
 
@@ -13,6 +14,7 @@ import { useState, useEffect} from 'react';
    const dispatch = useDispatch()
 
    const handleFavorite = () => {
+    
       if(isFav){
          setIsFav(false);
          dispatch(removeFav(id))
@@ -21,8 +23,6 @@ import { useState, useEffect} from 'react';
          setIsFav(true);
          dispatch(addFav({id, name, gender, image, species, origin, status, onClose}))
       }
-
-
    }
    useEffect(() => {
       myFavorites.forEach((fav) => {
@@ -30,11 +30,11 @@ import { useState, useEffect} from 'react';
             setIsFav(true);
          }
       });
+
    }, [myFavorites]); 
 
    return (
       <div className={styles.card}>
-         <h1 className={styles.cardHo}></h1>
              
           <button onClick={()=>onClose(id)}>❌</button>
           <Link to={`/detail/${id}`}>
@@ -42,8 +42,8 @@ import { useState, useEffect} from 'react';
             <h2>{name}</h2>
           </Link> 
           
-         <button onClick={handleFavorite}>{isFav ? '❤️' : '🤍'} </button>  
-         
+         <button onClick={()=>handleFavorite()}>{isFav ? '❤️' : '🤍'} </button>  
+      
          <img src={image} alt=''/>
       </div>
    );

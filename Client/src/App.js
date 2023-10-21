@@ -20,7 +20,7 @@ function App() {
 
    const login = async ({ email, password }) => {
       try {
-         const URL = 'http://localhost:3001/rickandmorty/login/';
+         const URL = 'http://localhost:3001/rickandmorty/login';
          const { data } = await axios(URL + `?email=${email}&password=${password}`)
          const { access } = data;
          setAccess(access);

@@ -12,6 +12,7 @@ const Favorites = () => {
     const dispatch = useDispatch();
     const myFavorites = useSelector((state) => state.myFavorites)
 
+
     const removeFavorite = (id) => {
         dispatch(removeFav(id))
     }
@@ -45,6 +46,7 @@ const Favorites = () => {
             <div className={styles.cards}>
             {
                 myFavorites?.map(({ id, name, species, gender, image, origin, status }) => {
+                    
                     return (
                         <Card
                             key={id}
@@ -65,6 +67,8 @@ const Favorites = () => {
         </div>
     )
 }
+
+
 // const mapStateToProps = (state) => {
 //     return {
 //         myFavorites: state.myFavorites
